@@ -31,11 +31,39 @@ namespace VirusSuck
             /*add multiple items Second way*/
 
             /*remove multiple items*/
-            names.RemoveRange(names.Count - 4,3) ;
+            names.RemoveRange(names.Count - 3,3) ;
+
+            foreach (var name in names)
+            {
+                Console.WriteLine($"current name is {name}");
+            }
 
 
+            //-------------
+            var symptoms = new Dictionary<string, string> ();
 
+            /*add single items*/
+            symptoms.Add("COVID-19","Dry cough,fever, respiratory problems");
+            symptoms.Add("Ebola", "fever, headache, muscle pain, and chills");
+            symptoms.Add("Spanish Flu", " fever, a dry cough, fatigue and difficulty breathing");
+            symptoms.Add("SARS", "Fever, dry cough, headache, muscle aches, and difficulty breathing");
+            symptoms.Add("Rabies", "Symptoms include fever, headache, excess salivation, muscle spasms, paralysis, and mental confusion.");
 
+            /*get single thing*/
+            var covidSymptons = symptoms["COVID-19"];
+
+            /*remove single thing*/
+            symptoms.Remove("Ebola");
+
+            /*collection initializer*
+             */
+
+            var otherDictionary = new Dictionary<string, int> { { "nathan", 33 }, { "martin", 36 } };
+
+            foreach (var (virus,symptom) in symptoms)
+            {
+               
+            }
         }
     }
 }
