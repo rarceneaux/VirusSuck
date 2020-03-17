@@ -62,8 +62,23 @@ namespace VirusSuck
 
             foreach (var (virus,symptom) in symptoms)
             {
-               
+                Console.WriteLine($"The {virus} virus has the following symptoms: {symptom}");
             }
+
+            foreach (var name in names)
+            {
+                Console.WriteLine($"The {name} virus has the following symptoms:{symptoms[name]}");
+            }
+
+            /*Queues*/
+            var diseasesToCure = new Queue<string>();
+            diseasesToCure.Enqueue("SARS");
+            diseasesToCure.Enqueue("COVID-19");
+
+            diseasesToCure.Dequeue();
+
+
+            /*Hashset*/
         }
     }
 }
